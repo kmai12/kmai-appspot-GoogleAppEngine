@@ -11,7 +11,7 @@ var bio = {
     },
     "welcomeMessage": "",
     "skills": [
-	"C", "C++", "Java", "Eclipse"
+	"C++, Java, MySQL, SQLite, JavaScript, HTML, CSS, Git/GitHub, LINUX, Eclipse"
     ],
     "bioPic": "images/fry.jpg"
 }

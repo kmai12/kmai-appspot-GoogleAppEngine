@@ -36,6 +36,11 @@ function displayBio(){
     $("#topContacts").append(formattedLocation);
     $("#topContacts").append(formattedGitHub);
 
+    $("#footerContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedLocation);
+    $("#footerContacts").append(formattedGitHub);
+
     $("#header").append(formattedBioPic);
     $("#header").append(formattedWelcome);
 

@@ -17,6 +17,7 @@ $RECYCLE.BIN/
 #Backups and ## files
 *~
 *#
+**pyc
 * - Copy*
 
 # =========================

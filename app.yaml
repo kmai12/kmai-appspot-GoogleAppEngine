@@ -4,10 +4,33 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
 handlers:
+
 - url: /
   static_files: assets/index.html
   upload: assets/index.html
 
+- url: /guestbook.*
+  script: guestbook.application
+
+- url: /helloworld
+  script: helloworld.application
+
+
+
+
+
 - url: /
   static_dir: assets
+
+
+
+
+
+

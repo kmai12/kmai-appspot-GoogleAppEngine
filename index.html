@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 {% autoescape true %}
 <html>
-  <body>
+  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  <script src="javascript/jQuery.js"></script>
+  <script src="javascript/helper.js"></script>
+
+<head>
+
+</head>
+
+  <body class="dark-gray">
+      <ul class="navigation">
+	<li><a href="/">Home</a></li>
+	<li><a href="/guestbook">GuestBook</a></li>
+      </ul>
+  
+      <div style="height:300px;width:800px;border:1px solid #ccc;background-color:#FFCC66;font:14px/18px Georgia, Garamond, Serif;overflow:auto;">
+
     {% for greeting in greetings %}
-      {% if greeting.author %}
-        <b>{{ greeting.author.nickname() }}</b> wrote:
-      {% else %}
-       An anonymous person wrote:
-      {% endif %}
-      <blockquote>{{ greeting.content }}</blockquote>
+    {% if greeting.author %}
+    <b>{{ greeting.author.nickname() }}</b> wrote:
+    {% else %}
+    An anonymous person wrote:
+    {% endif %}
+    <blockquote>{{ greeting.content }}</blockquote>
     {% endfor %}
 
+    </div>
+    </div>
+    <div class="gray">
     <form action="guestbook/sign?guestbook_name={{ guestbook_name }}" method="post">
-      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><textarea name="content" rows="3" cols="60">Sign here</textarea></div>
       <div><input type="submit" value="Sign Guestbook"></div>
     </form>
 
@@ -24,7 +42,15 @@
     </form>
 
     <a href="{{ url|safe }}">{{ url_linktext }}</a>
+    </div>
 
+    <div id="letsConnect" class='dark-gray'>
+      <h2 class='orange center-text'>Let's Connect</h2>
+      <ul id="footerContacts" class="flex-box">
+      </ul>
+    </div>
   </body>
+  <script src="javascript/contacts.js"></script>
+
 </html>
 {% endautoescape %}
